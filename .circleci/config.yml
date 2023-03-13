@@ -33,3 +33,4 @@ jobs:
           name: Push Image Docker
           command: |
             docker push $DOCKER_REPO/$DOCKER_IMAGE:$DOCKER_TAG
+
