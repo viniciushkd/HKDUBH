@@ -1,2 +1,15 @@
 server:
   port: 8090
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://${SQLSERVER_URL};databaseName=${SQLSERVER_DATABASE}
+    username: ${SQLSERVER_USER}
+    password: ${SQLSERVER_PASSWORD}
+  config:
+    activate:
+      on-profile: sqlserver
